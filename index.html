@@ -12,8 +12,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --turq:#38c2d4;
+@font-face{
+  font-family:'FbCarbon';
+  src:url('fonts/fbcarbon-regularwebfont.woff2') format('woff2'),url('fonts/fbcarbon-regularwebfont.woff') format('woff');
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'FbCarbon';
+  src:url('fonts/fbcarbon-boldwebfont.woff2') format('woff2'),url('fonts/fbcarbon-boldwebfont.woff') format('woff');
+  font-weight:500 900;font-style:normal;font-display:swap;
+}
+:root{  --turq:#38c2d4;
   --turq-dark:#1e9fb1;
   --brown:#4a3315;
   --brown-soft:#7d6547;
@@ -35,7 +44,7 @@ body{
   overflow-x:hidden;
 }
 img{max-width:100%;height:auto;display:block}
-h1,h2{font-family:'Secular One','Rubik',sans-serif;font-weight:400;line-height:1.14}
+h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;line-height:1.14}
 
 /* ============ TOPBAR ============ */
 .topbar{
@@ -90,7 +99,7 @@ h1,h2{font-family:'Secular One','Rubik',sans-serif;font-weight:400;line-height:1
   padding:17px 28px;
   min-height:64px;
   width:100%;max-width:440px;
-  font-family:'Secular One','Rubik',sans-serif;
+  font-family:'FbCarbon','Secular One','Rubik',sans-serif;
   font-size:clamp(1.06rem,2.7vw,1.32rem);
   line-height:1.22;
   box-shadow:0 10px 26px rgba(34,193,94,.4), inset 0 1px 0 rgba(255,255,255,.35);
