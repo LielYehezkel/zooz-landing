@@ -11,21 +11,21 @@
 :root{
   --turq:#38c2d4;
   --turq-dark:#1e9fb1;
-  --brown:#4a3315;
-  --brown-soft:#7d6547;
+  --brown:#604219;
+  --brown-soft:#8d6b40;
   --yellow:#ffd028;
   --bg:#fffdf6;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family:'FbCarbon','Rubik',sans-serif;
+  font-family:'FbCarbon','Aleo','Rubik',sans-serif;
   background:var(--bg);
   color:var(--brown);
   line-height:1.7;
 }
 .wrap{max-width:760px;margin:0 auto;padding:40px 20px 80px}
 h1{
-  font-family:'FbCarbon','Secular One','Rubik',sans-serif;
+  font-family:'FbCarbon','Aleo','Rubik',sans-serif;
   font-weight:400;
   font-size:clamp(1.7rem,5vw,2.4rem);
   margin-bottom:8px;
@@ -34,7 +34,7 @@ h1{
 h1 .hl{color:var(--turq-dark)}
 .updated{color:var(--brown-soft);font-size:.9rem;margin-bottom:28px}
 h2{
-  font-family:'FbCarbon','Secular One','Rubik',sans-serif;
+  font-family:'FbCarbon','Aleo','Rubik',sans-serif;
   font-weight:400;
   font-size:1.25rem;
   margin:30px 0 8px;

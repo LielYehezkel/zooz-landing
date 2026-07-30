@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 @font-face{
   font-family:'FbCarbon';
@@ -24,8 +24,8 @@
 }
 :root{  --turq:#38c2d4;
   --turq-dark:#1e9fb1;
-  --brown:#4a3315;
-  --brown-soft:#7d6547;
+  --brown:#604219;
+  --brown-soft:#8d6b40;
   --yellow:#ffd028;
   --gold1:#f9ce71;
   --gold2:#c58132;
@@ -37,14 +37,14 @@
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
 body{
-  font-family:'FbCarbon','Rubik',sans-serif;
+  font-family:'FbCarbon','Aleo','Rubik',sans-serif;
   background:var(--bg);
   color:var(--brown);
   line-height:1.5;
   overflow-x:hidden;
 }
 img{max-width:100%;height:auto;display:block}
-h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;line-height:1.14}
+h1,h2{font-family:'FbCarbon','Aleo','Rubik',sans-serif;font-weight:400;line-height:1.14}
 
 /* ============ TOPBAR ============ */
 .topbar{
@@ -99,7 +99,7 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
   padding:17px 28px;
   min-height:64px;
   width:100%;max-width:440px;
-  font-family:'FbCarbon','Secular One','Rubik',sans-serif;
+  font-family:'FbCarbon','Aleo','Rubik',sans-serif;
   font-size:clamp(1.06rem,2.7vw,1.32rem);
   line-height:1.22;
   box-shadow:0 10px 26px rgba(34,193,94,.4), inset 0 1px 0 rgba(255,255,255,.35);
@@ -126,12 +126,12 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
   position:absolute;top:-9px;inset-inline-start:50%;transform:translateX(50%);
   background:var(--yellow);color:var(--brown);font-weight:800;font-size:.8rem;
   padding:5px 15px;border-radius:999px;z-index:5;white-space:nowrap;
-  box-shadow:0 4px 12px rgba(74,51,21,.18);
+  box-shadow:0 4px 12px rgba(96,66,25,.18);
 }
 .phone{
   width:min(320px,86vw);
   background:#111b21;border-radius:36px;padding:9px;
-  box-shadow:0 22px 55px rgba(74,51,21,.26);
+  box-shadow:0 22px 55px rgba(96,66,25,.26);
   position:relative;z-index:2;
 }
 .screen{background:#efe7db;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;height:500px}
@@ -143,7 +143,7 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
   width:34px;height:34px;border-radius:50%;
   background:linear-gradient(135deg,var(--gold1),var(--gold2));
   display:flex;align-items:center;justify-content:center;
-  font-family:'Secular One';color:#fff;font-size:.68rem;flex:none;
+  font-family:'Aleo';color:#fff;font-size:.68rem;flex:none;
 }
 .wa-name{font-weight:700;font-size:.9rem;line-height:1.1}
 .wa-status{font-size:.68rem;opacity:.8}
@@ -157,12 +157,12 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
 .coin{
   width:15px;height:15px;border-radius:50%;
   background:radial-gradient(circle at 35% 30%,var(--gold1),var(--gold2));
-  border:1.5px solid #a8681f;flex:none;display:inline-block;
+  border:1.5px solid #c58132;flex:none;display:inline-block;
 }
 .chat{
   flex:1;padding:12px 11px;display:flex;flex-direction:column;gap:8px;
   overflow:hidden;justify-content:flex-end;
-  background-image:radial-gradient(rgba(74,51,21,.05) 1px, transparent 1px);
+  background-image:radial-gradient(rgba(96,66,25,.05) 1px, transparent 1px);
   background-size:18px 18px;
 }
 .msg{
@@ -182,7 +182,7 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
 .coin-fly{
   position:absolute;width:20px;height:20px;border-radius:50%;
   background:radial-gradient(circle at 35% 30%,var(--gold1),var(--gold2));
-  border:2px solid #a8681f;z-index:3;opacity:0;pointer-events:none;
+  border:2px solid #c58132;z-index:3;opacity:0;pointer-events:none;
 }
 .coin-fly.go{animation:fly 1s ease forwards}
 @keyframes fly{
@@ -237,7 +237,7 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2.5vw,22px);text-align:right}
 .pcard{
   background:#fff;border-radius:var(--radius);padding:20px;
-  box-shadow:0 8px 24px rgba(74,51,21,.09);
+  box-shadow:0 8px 24px rgba(96,66,25,.09);
   border-top:5px solid var(--yellow);
   display:flex;gap:12px;align-items:flex-start;
 }
@@ -254,7 +254,7 @@ h1,h2{font-family:'FbCarbon','Secular One','Rubik',sans-serif;font-weight:400;li
 }
 .final-inner{max-width:760px;margin:0 auto}
 .final-text{text-align:center;display:flex;flex-direction:column;align-items:center}
-.z3d-final{width:min(340px,72vw);margin-bottom:16px;filter:drop-shadow(0 10px 22px rgba(74,51,21,.22))}
+.z3d-final{width:min(340px,72vw);margin-bottom:16px;filter:drop-shadow(0 10px 22px rgba(96,66,25,.22))}
 .final h2{font-size:clamp(1.55rem,5.5vw,2.4rem);margin-bottom:8px}
 .final p{color:var(--brown-soft);margin-bottom:22px;font-size:clamp(.95rem,3.4vw,1.05rem)}
 
@@ -269,7 +269,7 @@ footer a{color:var(--brown-soft)}
   position:fixed;bottom:0;right:0;left:0;z-index:50;
   padding:10px 14px calc(10px + env(safe-area-inset-bottom));
   background:rgba(255,253,246,.94);backdrop-filter:blur(10px);
-  border-top:1px solid rgba(74,51,21,.12);
+  border-top:1px solid rgba(96,66,25,.12);
   transform:translateY(110%);
   transition:transform .3s ease;
   display:flex;justify-content:center;
