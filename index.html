@@ -311,6 +311,21 @@ footer a{color:var(--brown-soft)}
 
   gtag('config', 'AW-18308371106');
 </script>
+<!-- Event snippet for איש קשר (1) conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18308371106/mFOjCP72qt0cEKKljppE',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -523,18 +538,24 @@ src="https://www.facebook.com/tr?id=696898008422655&ev=PageView&noscript=1"
 </script>
 
 <script>
-/* Conversion tracking: every bot-button click = one Lead per visitor session */
+/* Conversion tracking: bot-button click = one conversion per visitor session (Meta Lead + Google Ads) */
 (function(){
+  function sentOnce(key){
+    try {
+      if (sessionStorage.getItem(key)) return false;
+      sessionStorage.setItem(key, '1');
+      return true;
+    } catch (e) { return true; }
+  }
   var ctas = document.querySelectorAll('a.cta');
   for (var i = 0; i < ctas.length; i++) {
     ctas[i].addEventListener('click', function(){
-      if (typeof fbq !== 'function') return;
-      try {
-        if (!sessionStorage.getItem('zooz_lead_sent')) {
-          fbq('track', 'Lead');
-          sessionStorage.setItem('zooz_lead_sent', '1');
-        }
-      } catch (e) { fbq('track', 'Lead'); }
+      if (typeof fbq === 'function' && sentOnce('zooz_lead_sent')) {
+        fbq('track', 'Lead');
+      }
+      if (typeof gtag === 'function' && sentOnce('zooz_gads_sent')) {
+        gtag('event', 'conversion', {'send_to': 'AW-18308371106/mFOjCP72qt0cEKKljppE'});
+      }
     });
   }
 })();
