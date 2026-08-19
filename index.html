@@ -554,6 +554,30 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </script>
 
 <script>
+/* Bot link by traffic source: Google paid traffic gets its own pre-filled message, everyone else keeps the default */
+(function(){
+  var GOOGLE_LINK = "https://wa.me/972533635013?text=%D7%A9%D7%9C%D7%95%D7%9D!%0A%D7%94%D7%92%D7%A2%D7%AA%D7%9D%20%D7%9C-ZOOZ%2C%20%D7%91%D7%95%D7%98%20%D7%94%D7%9E%D7%A9%D7%97%D7%A7%D7%99%D7%9D%20%D7%95%D7%94%D7%AA%D7%95%D7%9B%D7%9F%20%D7%A9%D7%9C%20'%D7%90%D7%A8%D7%A5%20%D7%94%D7%AA%D7%A0%22%D7%9A'.%0A%D7%A9%D7%9C%D7%97%D7%95%20%D7%90%D7%AA%20%D7%94%D7%94%D7%95%D7%93%D7%A2%D7%94%20%D7%94%D7%96%D7%95%20-%20%D7%95%D7%A0%D7%AA%D7%97%D7%99%D7%9C%20%D7%A8%D7%A9%D7%9E%D7%99%D7%AA!%0A%0A%D7%95%D7%90%D7%92%D7%91%2C%20%D7%9E%D7%92%D7%A0%D7%99%D7%91%20%D7%9C%D7%93%D7%A2%D7%AA%20%D7%A9%D7%94%D7%92%D7%A2%D7%AA%D7%9D%20%D7%93%D7%A8%D7%9A%20%D7%A7%D7%9E%D7%A4%D7%99%D7%99%D7%9F%20%D7%92%D7%95%D7%92%D7%9C";
+  var KEY = 'zooz_from_google';
+  function param(n){
+    var m = window.location.search.match(new RegExp('[?&]' + n + '=([^&]*)'));
+    return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
+  }
+  function isGooglePaid(){
+    if (param('gclid') || param('gbraid') || param('wbraid')) return true;
+    if (param('utm_source').toLowerCase().indexOf('google') > -1) return true;
+    return false;
+  }
+  var fromGoogle = isGooglePaid();
+  try {
+    if (fromGoogle) sessionStorage.setItem(KEY, '1');
+    else if (sessionStorage.getItem(KEY)) fromGoogle = true;
+  } catch (e) {}
+  if (!fromGoogle) return;
+  var ctas = document.querySelectorAll('a.cta');
+  for (var i = 0; i < ctas.length; i++) ctas[i].href = GOOGLE_LINK;
+})();
+</script>
+<script>
 /* Conversion tracking: bot-button click = one conversion per visitor session (Meta Lead + Google Ads + TikTok) */
 (function(){
   function sentOnce(key){
